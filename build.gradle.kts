@@ -8,8 +8,8 @@ import org.gradle.jvm.toolchain.JavaLanguageVersion
 plugins {
     application
     jacoco
-    id("com.diffplug.spotless") version "8.6.0"
-    id("com.gradleup.shadow") version "9.4.1"
+    id("com.diffplug.spotless") version "8.10.2"
+    id("com.gradleup.shadow") version "9.6.1"
 }
 
 java {
@@ -70,7 +70,7 @@ tasks.register<JavaExec>("benchmark") {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:6.1.0"))
+    testImplementation(platform("org.junit:junit-bom:6.1.3"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("org.assertj:assertj-core:3.27.7")
